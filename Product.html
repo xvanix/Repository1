@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porsche 911</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ===== BASE RESET ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lato', sans-serif; background: #0e0e0e; color: #f0ece4; }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px; position: fixed; top: 0; width: 100%;
+      background: rgba(14,14,14,0.93); backdrop-filter: blur(8px);
+      z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo { font-family: 'Playfair Display', serif; font-size: 20px; letter-spacing: 4px; color: #c8a96e; }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { text-decoration: none; color: #aaa; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+    nav ul a:hover { color: #c8a96e; }
+    .nav-btn { background: #c8a96e; color: #0e0e0e; padding: 9px 22px; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .nav-btn:hover { opacity: 0.85; }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; padding: 120px 60px 60px;
+      background: radial-gradient(ellipse at 70% 50%, rgba(200,169,110,0.07) 0%, transparent 65%), #0e0e0e;
+    }
+    .hero-tag { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #c8a96e; margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(56px, 9vw, 120px); font-weight: 700; line-height: 1; }
+    .hero h1 span { color: #c8a96e; }
+    .hero p { font-size: 15px; font-weight: 300; color: #888; line-height: 1.8; margin: 24px 0 36px; max-width: 380px; }
+    .hero-btns { display: flex; gap: 16px; }
+    .btn-gold { background: #c8a96e; color: #0e0e0e; padding: 14px 36px; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .btn-gold:hover { opacity: 0.85; }
+    .btn-outline { border: 1px solid #444; color: #aaa; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: border-color 0.3s, color 0.3s; }
+    .btn-outline:hover { border-color: #c8a96e; color: #c8a96e; }
+    .hero-car { margin-top: 60px; width: 100%; max-width: 780px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="logo">PORSCHE 911</div>
+    <ul>
+      <li><a href="#models">Models</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#cta">Contact</a></li>
+    </ul>
+    <a href="#cta" class="nav-btn">Configure</a>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <p class="hero-tag">Since 1963 — Stuttgart, Germany</p>
+    <h1>Porsche<br/><span>911</span></h1>
+    <p>Six decades of precision. One unmistakable silhouette. The car that redefined what a sports car can be.</p>
+    <div class="hero-btns">
+      <a href="#models" class="btn-gold">Explore Models</a>
+      <a href="#features" class="btn-outline">Learn More</a>
+    </div>
+
+    <!-- SVG Car Illustration -->
+    <svg class="hero-car" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="body" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#3a3020"/>
+          <stop offset="100%" stop-color="#1a1510"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Ground shadow -->
+      <ellipse cx="420" cy="288" rx="330" ry="12" fill="rgba(200,169,110,0.07)"/>
+      <!-- Car body -->
+      <path d="M100 240 Q120 250 180 255 L620 255 Q680 248 700 235 Q718 224 714 210 L680 200 Q640 192 600 194 L550 190 Q540 155 528 134 Q510 108 474 96 Q435 84 385 86 Q325 88 285 108 Q252 126 238 155 Q226 178 220 195 L165 198 Q128 200 106 212 Z" fill="url(#body)" stroke="rgba(200,169,110,0.15)" stroke-width="1"/>
+      <!-- Roof -->
+      <path d="M258 194 Q268 155 295 132 Q328 106 378 98 Q420 90 462 100 Q500 112 522 136 Q540 158 548 192 Z" fill="#2a2218"/>
+      <!-- Windshield -->
+      <path d="M274 192 Q284 160 308 140 Q338 118 378 112 Q416 106 452 116 Q484 128 504 152 Q520 170 526 192 Z" fill="rgba(200,230,255,0.04)" stroke="rgba(200,169,110,0.2)" stroke-width="1"/>
+      <!-- Headlight -->
+      <ellipse cx="132" cy="214" rx="15" ry="8" fill="rgba(200,169,110,0.1)" stroke="rgba(200,169,110,0.5)" stroke-width="1.5" filter="url(#glow)"/>
+      <!-- Taillight -->
+      <rect x="694" y="202" width="16" height="14" rx="2" fill="rgba(192,57,43,0.2)" stroke="rgba(192,57,43,0.6)" stroke-width="1.5"/>
+      <!-- Front Wheel -->
+      <circle cx="215" cy="265" r="46" fill="#111" stroke="rgba(200,169,110,0.2)" stroke-width="2"/>
+      <circle cx="215" cy="265" r="32" fill="none" stroke="rgba(200,169,110,0.3)" stroke-width="1.5"/>
+      <circle cx="215" cy="265" r="16" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"/>
+      <g stroke="rgba(200,169,110,0.4)" stroke-width="1.5">
+        <line x1="215" y1="235" x2="215" y2="295"/>
+        <line x1="185" y1="250" x2="245" y2="280"/>
+        <line x1="185" y1="280" x2="245" y2="250"/>
+        <line x1="183" y1="265" x2="247" y2="265"/>
+      </g>
+      <circle cx="215" cy="265" r="7" fill="rgba(200,169,110,0.5)"/>
+      <!-- Rear Wheel -->
+      <circle cx="592" cy="265" r="50" fill="#111" stroke="rgba(200,169,110,0.2)" stroke-width="2"/>
+      <circle cx="592" cy="265" r="36" fill="none" stroke="rgba(200,169,110,0.3)" stroke-width="1.5"/>
+      <circle cx="592" cy="265" r="18" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"/>
+      <g stroke="rgba(200,169,110,0.4)" stroke-width="1.5">
+        <line x1="592" y1="231" x2="592" y2="299"/>
+        <line x1="558" y1="248" x2="626" y2="282"/>
+        <line x1="558" y1="282" x2="626" y2="248"/>
+        <line x1="556" y1="265" x2="628" y2="265"/>
+      </g>
+      <circle cx="592" cy="265" r="8" fill="rgba(200,169,110,0.5)"/>
+    </svg>
+  </section>
+
+  <!-- Members 2, 3, 4 will paste their sections below this line -->
+
+</body>
+</html>
