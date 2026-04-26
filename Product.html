@@ -6,15 +6,6 @@
   <title>Porsche 911</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
   <style>
-    /* ===== FEATURES SECTION ===== */
-.features { background: #111; padding: 100px 60px; }
-.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 48px; }
-.feature { background: #1a1a1a; padding: 40px 36px; transition: background 0.3s; }
-.feature:hover { background: #1e1e1e; }
-.feature-num { font-family: 'Playfair Display', serif; font-size: 42px; color: rgba(200,169,110,0.15); line-height: 1; margin-bottom: 16px; }
-.feature h3 { font-size: 18px; font-weight: 700; color: #f0ece4; margin-bottom: 10px; }
-.feature p { font-size: 13px; font-weight: 300; color: #777; line-height: 1.7; }
-
     /* ===== BASE RESET ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Lato', sans-serif; background: #0e0e0e; color: #f0ece4; }
@@ -57,7 +48,21 @@
 .feature-num { font-family: 'Playfair Display', serif; font-size: 42px; color: rgba(200,169,110,0.15); line-height: 1; margin-bottom: 16px; }
 .feature h3 { font-size: 18px; font-weight: 700; color: #f0ece4; margin-bottom: 10px; }
 .feature p { font-size: 13px; font-weight: 300; color: #777; line-height: 1.7; }
+/* ===== CTA SECTION ===== */
+.cta { padding: 120px 60px; text-align: center; }
+.cta .section-title { margin-bottom: 16px; }
+.cta > p { font-size: 14px; color: #777; margin-bottom: 40px; }
 
+/* ===== FOOTER ===== */
+footer {
+  background: #080808; padding: 40px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+footer p { font-size: 12px; color: #444; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 12px; color: #444; text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: #c8a96e; }
   </style>
 </head>
 <body>
@@ -158,10 +163,24 @@
       </div>
     </div>
   </section>
-  
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta" id="cta">
+    <p class="section-label">Configure Yours</p>
+    <h2 class="section-title">Build Your Perfect 911</h2>
+    <p>Choose your model, colour, and trim. Make it unmistakably yours.</p>
+    <a href="#" class="btn-gold">Start Configuring</a>
+  </section>
 
-
-  <!-- Members 2, 3, 4 will paste their sections below this line -->
+  <!-- ===== FOOTER ===== */
+  <footer>
+    <p>© 2025 Porsche AG — All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
 
 </body>
 </html>
+  
