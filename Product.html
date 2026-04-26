@@ -40,6 +40,15 @@
     .btn-outline { border: 1px solid #444; color: #aaa; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: border-color 0.3s, color 0.3s; }
     .btn-outline:hover { border-color: #c8a96e; color: #c8a96e; }
     .hero-car { margin-top: 60px; width: 100%; max-width: 780px; }
+    /* ===== FEATURES SECTION ===== */
+.features { background: #111; padding: 100px 60px; }
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 48px; }
+.feature { background: #1a1a1a; padding: 40px 36px; transition: background 0.3s; }
+.feature:hover { background: #1e1e1e; }
+.feature-num { font-family: 'Playfair Display', serif; font-size: 42px; color: rgba(200,169,110,0.15); line-height: 1; margin-bottom: 16px; }
+.feature h3 { font-size: 18px; font-weight: 700; color: #f0ece4; margin-bottom: 10px; }
+.feature p { font-size: 13px; font-weight: 300; color: #777; line-height: 1.7; }
+
   </style>
 </head>
 <body>
@@ -113,6 +122,34 @@
       <circle cx="592" cy="265" r="8" fill="rgba(200,169,110,0.5)"/>
     </svg>
   </section>
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <p class="section-label">Technology</p>
+    <h2 class="section-title">Built Different</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h3>Sport Chrono Package</h3>
+        <p>Lap timing, acceleration measurement, and dynamic response tuning — all in one system.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h3>PASM Suspension</h3>
+        <p>Active damper management that continuously adapts to road conditions for perfect balance.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h3>PCM Infotainment</h3>
+        <p>10.9-inch touchscreen with Apple CarPlay, navigation, and live vehicle telemetry.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h3>Flat-Six Engine</h3>
+        <p>Twin-turbocharged 3.0L boxer engine — rear-mounted, perfectly balanced, legendary.</p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Members 2, 3, 4 will paste their sections below this line -->
 
